@@ -1001,7 +1001,37 @@
         .brand img { width: 205px; }
       }
     </style>
-  </head>
+  <style>
+      .story-grid {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: clamp(12px, 2vw, 24px);
+        width: 100%;
+        margin-top: 2rem;
+      }
+      .story-grid img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 6 / 5;
+        object-fit: contain;
+        background: #151411;
+        border-radius: 8px;
+      }
+      #contact .story-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      @media (max-width: 700px) {
+        .story-grid, #contact .story-grid { grid-template-columns: 1fr; }
+      }
+    </style><style>
+      .contact-art {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,2vw,24px);margin-top:2rem}
+      .contact-art figure {position:relative;aspect-ratio:3/2;margin:0;overflow:hidden;border-radius:8px;color:white}
+      .contact-city img {width:100%;height:100%;display:block;object-fit:cover}
+      .contact-city figcaption {position:absolute;inset:auto 0 0;padding:12% 6% 6%;background:linear-gradient(transparent,rgba(0,0,0,.8));font:600 clamp(1.4rem,3vw,2.6rem)/1.1 Georgia,serif}
+      .contact-brand {display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5%;background:radial-gradient(ellipse at 80% 140%,#97662e,transparent 54%),#141210}
+      .contact-brand img {display:block;width:55%;height:40%;object-fit:contain}
+      .contact-brand figcaption {font:500 clamp(.875rem,1.3vw,1.15rem)/1.4 sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#efdbbb}
+      @media(max-width:700px){.contact-art {grid-template-columns:1fr}}
+    </style></head>
   <body>
     <header class="site-header">
       <nav class="nav container" aria-label="Primary navigation">
@@ -1097,7 +1127,7 @@
             </blockquote>
             <cite>Exodus 25:8–9, NLT</cite>
           </aside>
-        </div>
+        <div class="story-grid"><img src="./resources/stories/MDGIFT_Image_01.jpg" loading="lazy" alt="People. Initiatives. Transformation."><img src="./resources/stories/MDGIFT_Image_02.jpg" loading="lazy" alt="Building People"><img src="./resources/stories/MDGIFT_Image_04.jpg" loading="lazy" alt="Driving Transformation in Nigeria and Beyond"></div></div>
       </section>
 
       <section class="section framework" id="framework">
@@ -1296,7 +1326,7 @@
               <strong>∞</strong><span>Generations</span>
             </div>
           </div>
-        </div>
+        <div class="story-grid"><img src="./resources/stories/MDGIFT_Image_08.jpg" loading="lazy" alt="Education and Skills Development"><img src="./resources/stories/MDGIFT_Image_09.jpg" loading="lazy" alt="Empowerment and Livelihoods"><img src="./resources/stories/MDGIFT_Image_16.jpg" loading="lazy" alt="Sustainable Impact"><img src="./resources/stories/MDGIFT_Image_18.jpg" loading="lazy" alt="Care. Dignity. Opportunity."><img src="./resources/stories/MDGIFT_Image_19.jpg" loading="lazy" alt="From Support to Transformation"><img src="./resources/stories/MDGIFT_Image_17.jpg" loading="lazy" alt="Together for Lasting Change"></div></div>
       </section>
 
       <section class="section" id="connect">
@@ -1319,7 +1349,7 @@
               >Contact MDGIFT ↗</a
             >
           </div>
-        </div>
+        <div class="story-grid"><img src="./resources/stories/MDGIFT_Image_12.jpg" loading="lazy" alt="Volunteer With Us"><img src="./resources/stories/MDGIFT_Image_13.jpg" loading="lazy" alt="Partner With Us"><img src="./resources/stories/MDGIFT_Image_14.jpg" loading="lazy" alt="Support Our Initiatives"></div></div>
       </section>
 
       <section class="section" id="faq">
@@ -1558,7 +1588,16 @@
               </form>
             </div>
           </div>
-        </div>
+        <div class="contact-art">
+            <figure class="contact-city">
+              <img src="./resources/stories/abuja.jpg" loading="lazy" width="1536" height="1024" alt="Illustration of Abuja National Mosque at sunset">
+              <figcaption>Abuja, Nigeria</figcaption>
+            </figure>
+            <figure class="contact-brand">
+              <img src="./resources/mdgift-logo-white.png" loading="lazy" alt="Manus Dei Global">
+              <figcaption>Social Impact Initiative</figcaption>
+            </figure>
+          </div></div>
       </section>
     </main>
 
