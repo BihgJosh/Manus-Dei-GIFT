@@ -1049,7 +1049,27 @@
       @media(max-width:700px){.contact-art {grid-template-columns:1fr}}
     </style><link rel="stylesheet" href="./src/gallery.css">
     <script type="module" src="./src/gallery.js"></script>
-  </head>
+  <style>
+      :root { --charcoal:#080706; --page:#fffdf8; --gold:#e7b95c; --gold-deep:#805715; }
+      .site-header,.footer,.impact,.contact-panel,.menu-toggle {background:#000}
+      .hero {background:#000}
+      .hero::before {
+        background:linear-gradient(90deg,#000 7%,rgba(0,0,0,.94) 29%,rgba(0,0,0,.68) 56%,rgba(0,0,0,.14)),url('./resources/stories/abuja.jpg') center 49% / cover;
+        mask-image:none;
+      }
+      .hero::after {display:none}
+      .hero h1 {text-shadow:0 3px 24px #0009}
+      .framework,.contact {background:#f7f0e2}
+      .framework-card {border-top:3px solid #bd8933}
+      #gallery {background:#050403;color:#fff8e9}
+      #gallery .album-bar {color:#f4deb1}
+      #gallery select,.event-controls button {background:#080706;color:#fff8ec;border-color:#886629}
+      .event-stage {background:#000;outline:1px solid #614919}
+      .event-controls {background:#000;border-top:1px solid #44351c}
+      .event-controls button:hover {background:#422f10}
+      .footer {border-top:2px solid #b18a43}
+      @media(max-width:760px){.hero::before{background-position:60% center;background-image:linear-gradient(90deg,#000e,#0009),url('./resources/stories/abuja.jpg')}}
+    </style></head>
   <body>
     <header class="site-header">
       <nav class="nav container" aria-label="Primary navigation">
