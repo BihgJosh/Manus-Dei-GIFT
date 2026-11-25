@@ -1,0 +1,10 @@
+#gallery {background:#f5f2ec}
+.album-bar {display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin:1.25rem 0;color:#403b32}
+.album-bar select {max-width:100%;padding:.75rem;border:1px solid #bdb7ac;border-radius:.45rem;background:white;font:inherit}
+.event-stage {background:#161714;border-radius:14px;overflow:hidden;box-shadow:0 12px 36px #231c141c;touch-action:pan-y}
+.event-stage img {display:block;width:100%;height:clamp(240px,60vh,650px);object-fit:contain}
+.event-controls {display:flex;align-items:center;justify-content:center;gap:.65rem;background:#20211e;padding:.7rem}
+.event-controls button {background:#31332e;color:white;border:1px solid #666657;border-radius:2rem;min-width:46px;height:46px;font:600 1.5rem/1 sans-serif;cursor:pointer}
+.event-controls #event-play {font-size:.95rem;padding:0 1.25rem}
+.event-controls button:hover {background:#505043}
+.event-stage :focus-visible,.event-stage:focus-visible {outline:3px solid #eabd68;outline-offset:-4px}
