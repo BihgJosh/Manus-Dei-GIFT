@@ -770,16 +770,32 @@
         flex-wrap: wrap;
         margin-top: 17px;
       }
-      .socials a {
-        width: 38px;
-        height: 38px;
-        display: grid;
-        place-items: center;
-        border-radius: 50%;
-        border: 1px solid rgba(255, 255, 255, 0.22);
-        color: #f0d399;
-        font-size: 0.7rem;
-        font-weight: 800;
+      .footer-brand address {
+        margin-top: 1rem;
+        font-style: normal;
+        line-height: 1.6;
+        color: #eee6db;
+      }
+      .socials a, .footer-community {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: .45rem .9rem;
+        border-radius: 2rem;
+        border: 1px solid #796d5d;
+        color: #f2e4d0;
+        font-size: .9rem;
+      }
+      .footer-community {
+        margin-top: 1rem;
+        background: #f0d399;
+        color: #251c12;
+        font-weight: 700;
+      }
+      .socials a:hover, .socials a:focus-visible, .footer-community:hover, .footer-community:focus-visible {
+        background: #fff1d6;
+        color: #251c12;
       }
       .footer-bottom {
         display: flex;
@@ -1031,7 +1047,9 @@
       .contact-brand img {display:block;width:55%;height:40%;object-fit:contain}
       .contact-brand figcaption {font:500 clamp(.875rem,1.3vw,1.15rem)/1.4 sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#efdbbb}
       @media(max-width:700px){.contact-art {grid-template-columns:1fr}}
-    </style></head>
+    </style><link rel="stylesheet" href="./src/gallery.css">
+    <script type="module" src="./src/gallery.js"></script>
+  </head>
   <body>
     <header class="site-header">
       <nav class="nav container" aria-label="Primary navigation">
@@ -1061,7 +1079,7 @@
           <span></span><span></span><span></span>
         </button>
         <div class="nav-links" id="primary-links">
-          <a href="#about">About</a><a href="#initiatives">Initiatives</a
+          <a href="#about">About</a><a href="#gallery">Gallery</a><a href="#initiatives">Initiatives</a
           ><a href="#framework">Framework</a><a href="#faq">FAQ</a
           ><a href="#contact">Contact</a>
         </div>
@@ -1293,6 +1311,27 @@
         </div>
       </section>
 
+      <section id="gallery" class="section" aria-labelledby="gallery-title">
+        <div class="container">
+          <h2 id="gallery-title">Event gallery</h2>
+          <div class="album-bar">
+            <label for="event-album">Choose an event</label>
+            <select id="event-album">
+              <option>Mission Hope and Light · Kagini, Day 1</option>
+              <option>Mission Hope and Light · Kagini, Day 2</option>
+              <option>Outreach</option><option>Hospital Outreach</option><option>Rain Conference</option>
+            </select>
+          </div>
+          <div class="event-stage" tabindex="0" aria-label="Event slideshow. Use left and right arrow keys to browse.">
+            <img id="event-photo" src="./resources/events/event-1-001.webp" loading="lazy" alt="Mission Hope and Light in Kagini, Day 1">
+            <div class="event-controls">
+              <button type="button" id="event-prev" aria-label="Previous photo">‹</button>
+              <button type="button" id="event-play">Play slideshow</button>
+              <button type="button" id="event-next" aria-label="Next photo">›</button>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="section impact" id="impact">
         <div class="container impact-grid">
           <div class="reveal">
@@ -1617,34 +1656,36 @@
               Manus Dei Global Initiative for Transformation. Aligning lives,
               systems, and structures with God's divine order.
             </p>
-            <div class="socials" aria-label="Official contact links">
+            <address>No. 588, Aliyu Dikko Street,<br>Area 1, Garki, Abuja.</address>
+            <a class="footer-community" href="https://tinyurl.com/manusdeiunited" target="_blank" rel="noopener noreferrer">Join the community</a>
+            <nav class="socials" aria-label="Official contact links">
               <a
                 href="https://tinyurl.com/manusdeiglobal"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="MDGIFT official link"
-                >WEB</a
+                >Website</a
               >
               <a
                 href="https://wa.me/2348086001110"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp MDGIFT"
-                >WA</a
+                >WhatsApp</a
               >
-              <a href="tel:+2349091001119" aria-label="Call MDGIFT">TEL</a>
+              <a href="tel:+2349091001119" aria-label="Call MDGIFT">Call us</a>
               <a
                 href="mailto:hello@manusdeiglobal.org"
                 aria-label="Email MDGIFT"
                 title="Email is provisional; replace with the confirmed official email"
-                >EM</a
+                >Email</a
               >
-            </div>
+            </nav>
           </div>
           <div>
             <h3>Quick Links</h3>
             <div class="footer-links">
-              <a href="#about">About</a><a href="#initiatives">Initiatives</a
+              <a href="#about">About</a><a href="#gallery">Gallery</a><a href="#initiatives">Initiatives</a
               ><a href="#framework">Framework</a><a href="#faq">FAQ</a
               ><a href="#contact">Contact</a>
             </div>
